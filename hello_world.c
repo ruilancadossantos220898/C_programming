@@ -186,7 +186,7 @@ Por definição, ou por convenção, mesmo que main não tenha argumentos, o com
 argc = 1
 argv[0] = "nome_do_executavel"
 
-se por exemplo, por comandos bash:
+Se por exemplo, por comandos bash:
 $  gcc codigo.c -o programa
 $  ./programa parametro1 parametro2
 
@@ -341,6 +341,6 @@ int main(void){
 }
 
 // Comandos bash:
-// $  gcc hello_world.c -o hello_world
-// $  ./hello_world
+// $ gcc hello_world.c -o hello_world
+// $ ./hello_world
 // $ echo $?      -> Logo após executar o programa, exibirá o código de saída do programa.
