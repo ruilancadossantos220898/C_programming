@@ -178,6 +178,24 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
+Porque a função main pode ter 2 parãmetros que já vêm predefinidos no código em C:
+I) int argc -> guarda o número inteiro de elementos que o vetor char *argc[] possui. Armazena o número total de 
+argumentos passados na execução do programa, incluindo o próprio nome do executável.
+II) char *argc[] -> vai ter as strings dos paramentros de entrada da main que podemos definir antes da execução.
+Por definição, ou por convenção, mesmo que main não tenha argumentos, o comportamento padrão é:
+argc = 1
+argv[0] = "nome_do_executavel"
+
+se por exemplo, por comandos bash:
+$  gcc codigo.c -o programa
+$  ./programa parametro1 parametro2
+
+Neste caso, os valores serão:
+
+argc = 3
+argv[0] = "nome_do_executavel"
+argv[1] = "parametro1"
+argv[2] = "parametro2"
 
 4) O que acontece se não houver main? Se tentar compilar um programa em C sem a função main, o compilador 
 gerará um erro, porque não encontrou o ponto de entrada do programa. 
@@ -325,3 +343,4 @@ int main(void){
 // Comandos bash:
 // $  gcc hello_world.c -o hello_world
 // $  ./hello_world
+// $ echo $?      -> Logo após executar o programa, exibirá o código de saída do programa.
